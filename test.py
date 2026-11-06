@@ -1,25 +1,23 @@
-def tree(N, values):
-    increase = 1
-    decrease = 1
-    max_increase = 1
-    max_decrease = 1
-    for i in range(N-1):
-        if values[i] < values[i+1]:
-            increase +=1
-        else:
-            if increase > max_increase:
-                max_increase = increase
-            increase = 1
-    for i in range(N-1):
-        if values[i] > values[i+1]:
-            decrease += 1
-        else:
-            if decrease > max_decrease:
-                max_decrease = decrease
-            decrease = 1
-    print(max_increase)
-    print(max_decrease)
+def trees(N, x):
 
-tree(4, [1,3,4,2])
+    up = 1
+    down = 1
+    max_up = 1 
+    max_down = 1
 
-    
+    for i in range(N - 1):
+        if x[i] < x[i + 1]:
+            up += 1
+            if up > max_up:
+                max_up = up
+            down = 1
+        elif x[i] > x[i+1]:
+            down +=1
+            if down > max_down:
+                max_down = down
+            up =1
+
+    print(max_up)
+    print(max_down)
+trees(4, [1, 3, 4, 2])
+
