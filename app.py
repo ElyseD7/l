@@ -5,5 +5,5 @@ from PIL import Image
 img = Image.open("mike.jpeg")
 img.show()
 
-while True:
-    print()
+pygame.mixer.music.load()
+pygame.mixer.music.unload()
