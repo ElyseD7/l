@@ -1,10 +1,23 @@
 import pygame
 import PIL
 import time
+import tkinter as tk
 pygame.init()
 
 from PIL import Image
 
+import tkinter as tk
+
+window = tk.Tk()
+window.geometry("300x200")
+
+tk.Label(window, text="MP3 Player", bg="lightblue").pack(fill="x")
+
+
+window.mainloop()
+
+button_row = tk.Frame(window)
+button_row.pack(pady=10)
 
 def play(x):
     pygame.mixer.music.load(x)
